@@ -1,0 +1,23 @@
+{% extends "floating_center.html" %}
+
+{% block title %}Creating Meal Plan{% endblock %}
+
+{% block content %}
+<div style="height: 100%; display: flex; flex-direction: column;">
+    <header style="padding: 1rem 1rem .75rem; flex: 0 0 auto;">
+        <a class="button" href="{{ back_url }}" style="border-color: {{ primary_color }}; color: {{ primary_color }};">Back</a>
+    </header>
+
+    <section style="flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; padding: 1rem; text-align: center;">
+        <img src="{{ placeholder_image }}" alt="Meal plan is being created" style="display: block; width: min(70vw, 320px); aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; background: #d8dee8;">
+        <div>
+            <h1 class="title is-4" style="margin-bottom: .5rem;">Creating meal plan</h1>
+            <p>Your meal plan is being created.</p>
+        </div>
+    </section>
+
+    <footer style="flex: 0 0 auto; height: .55rem; background-color: {{ background_color }};">
+        <div style="height: 100%; width: {{ progress }}%; background-color: {{ primary_color }};"></div>
+    </footer>
+</div>
+{% endblock %}
